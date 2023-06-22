@@ -1,0 +1,3713 @@
+{
+	"info": {
+		"_postman_id": "12112ed6-1395-4299-8703-3b7ea4a0255b",
+		"name": "Vaidik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1898185"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "Student Question Ask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODEyMTI3MzYsImV4cCI6MTY4MTIxNjMzNn0.jqbUhRpsw1ndBD6NQ0X8Y07MUZLpsZNFIAVikUOjRqc",
+									"type": "text"
+								},
+								{
+									"key": "question",
+									"value": "Question 001",
+									"type": "text"
+								},
+								{
+									"key": "questionType",
+									"value": "MCQ",
+									"type": "text"
+								},
+								{
+									"key": "questionSubject",
+									"value": "Maths",
+									"type": "text"
+								},
+								{
+									"key": "questionPrice",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tutorPrice",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "adminPrice",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "questionPhoto",
+									"type": "file",
+									"src": "/C:/itotek-original/images/author-1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/question/ask",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"ask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Question Unsolved Ask",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODIwNTk1MjQsImV4cCI6MTY4MjA2MzEyNH0.opFs4yP3PQq1qjN2ck71CspeKLtthZj9XeOMKHXnnu4",
+									"type": "text"
+								},
+								{
+									"key": "question",
+									"value": "Question 009",
+									"type": "text"
+								},
+								{
+									"key": "questionType",
+									"value": "MatchTheFollowing-less5",
+									"type": "text"
+								},
+								{
+									"key": "questionSubject",
+									"value": "Maths",
+									"type": "text"
+								},
+								{
+									"key": "questionPrice",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tutorPrice",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "adminPrice",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "questionPhoto",
+									"type": "file",
+									"src": "/C:/Users/Nikunj/Downloads/w3logo.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/question/unsolvedask",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"unsolvedask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Register (Email)",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\" : \"student10@gmail.com\",\r\n  \"password\" : \"abcabc\",\r\n  \"class\" : \"1\",\r\n  \"referralCode\":\"ab070461f409\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/register/email",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"register",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODExODk0NDcsImV4cCI6MTY4MTE5MzA0N30.D22dzAuvN7FG51u9_xyaobCzrU6MSIFKstcpvHf1vEE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/question/view/64251146536a6ed062129e58",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"view",
+								"64251146536a6ed062129e58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Login (Email)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\" : \"student3@gmail.com\",\r\n  \"password\" : \"abcabc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/login/email",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"login",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upvote or Downvote By Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODE1MzQyNTEsImV4cCI6MTY4MTUzNzg1MX0.ldnPpx-ZnkcNxcecz5yKx1XJN3eCys11O3-fogbw8Pg\",\r\n    \"questionId\": \"64182c909cf4f7be43597ba8\",\r\n    \"studentResponce\": \"upvote\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/reanswer",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"reanswer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question Price In USD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/student/getquestionprice",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"getquestionprice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "open and notopen question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJiZjUzZDFlOTU4ZWZiNjA4ZDNiNWUiLCJpYXQiOjE2ODA2MDI0MjksImV4cCI6MTY4MDYwNjAyOX0.dwrOq3SlOxggqTnyYmjqWzDlTYaa1MDP7KQilhpSBCw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/openquestion?limit=5&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"openquestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "closedquestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJiZjUzZDFlOTU4ZWZiNjA4ZDNiNWUiLCJpYXQiOjE2ODA2MDI0MjksImV4cCI6MTY4MDYwNjAyOX0.dwrOq3SlOxggqTnyYmjqWzDlTYaa1MDP7KQilhpSBCw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/closedquestion?limit=5&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"closedquestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pendingquestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJiZjUzZDFlOTU4ZWZiNjA4ZDNiNWUiLCJpYXQiOjE2ODA2MDI0MjksImV4cCI6MTY4MDYwNjAyOX0.dwrOq3SlOxggqTnyYmjqWzDlTYaa1MDP7KQilhpSBCw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/pendingquestion?limit=5&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"pendingquestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "issuequestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODIzMTkwOTcsImV4cCI6MTY4MjMyMjY5N30.N5lWnwTkpNI-vIndSV_QMsHiV3ZmbVyIHF7RLNa1Rhk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/issuequestion?limit=5&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"issuequestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "questions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODQzOTAzOTAsImV4cCI6MTY4NDM5Mzk5MH0.XXfGFn-jlkD86PdYVdWjFFKeeGewO8LJwuddk3dHMvA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/questions?limit=5&questionType=MCQ-exp&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"questions"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "questionType",
+									"value": "MCQ-exp"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODAxNzgwMjksImV4cCI6MTY4MDE4MTYyOX0.qx51WDUqTvqZTs7cs5xKglCVc4Wbi_easKqojEUUSuw\",\r\n    \"fullname\": \"student\",\r\n    \"mobileNo\":\"1234567890\",\r\n    \"email\":\"student3@gmail.com\",\r\n    \"Message\":\"cvbcvb\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/contact",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Wallet details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODAxNzgwMjksImV4cCI6MTY4MDE4MTYyOX0.qx51WDUqTvqZTs7cs5xKglCVc4Wbi_easKqojEUUSuw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/wallet",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student posting streak",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODA1MDkzNzcsImV4cCI6MTY4MDUxMjk3N30.1eIhWFK8OESfYgq2MNjsN3R39-SqW-8j4uixwZvKFu0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/postingstreak",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"postingstreak"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Register (Google)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJhYTM5NzZjMDhhYmM1MDM0NmU2ZTEiLCJpYXQiOjE2ODA1MTU5OTEsImV4cCI6MTY4MDUxOTU5MX0.nP0cmiGo8387oGHXZTBKIeL0ODwdgEBv0kQZe94OpxY\",\r\n    \"password\":\"abcabc\",\r\n    \"class\":\"cxvcxv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/googleregister",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"googleregister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Referral Dashboard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI1NTdjYzk0YTJiMTc5ZTMyYTdlMTgiLCJpYXQiOjE2ODAxNjg5MDgsImV4cCI6MTY4MDE3MjUwOH0.r6NoBiCJQKy_UWrRjeK4KLi4nKX6Eudtyjt1os4xsZA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/referraldashboard",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"referraldashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student register and question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "student9@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abcabc",
+									"type": "text"
+								},
+								{
+									"key": "class",
+									"value": "cvcxv",
+									"type": "text"
+								},
+								{
+									"key": "question",
+									"value": "xxcvcxv",
+									"type": "text"
+								},
+								{
+									"key": "questionType",
+									"value": "MCQ",
+									"type": "text"
+								},
+								{
+									"key": "questionSubject",
+									"value": "Maths",
+									"type": "text"
+								},
+								{
+									"key": "questionPhoto",
+									"type": "file",
+									"src": "/C:/itotek-original/images/author-3.jpg"
+								},
+								{
+									"key": "referralCode",
+									"value": "cc18a0ba1329",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/registerquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"registerquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student getinfo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODA1MDE4MzksImV4cCI6MTY4MDUwNTQzOX0.xZTkIykNltHjKiIi-c9z41wDnxm-KckEZ0hHnjuHtj0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/getinfo",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"getinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Update Question (Issue)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODE4OTU2MTMsImV4cCI6MTY4MTg5OTIxM30.o82-2KpJoJSdwywgqZWT0YtCgCZNobncg9MeLQoDY6k",
+									"type": "text"
+								},
+								{
+									"key": "question_1",
+									"value": "This is new ",
+									"type": "text"
+								},
+								{
+									"key": "questionPhoto",
+									"type": "file",
+									"src": "/C:/Users/Nikunj/Downloads/w3logo.jpg"
+								},
+								{
+									"key": "questionId",
+									"value": "643fb7846ed5800716beb3f7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/question/updatequestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"updatequestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Coupon verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDEwNGE1NTMxZWFmNjNiNmMwNWQ5OTMiLCJpYXQiOjE2ODIzMzEzODIsImV4cCI6MTY4MjMzNDk4Mn0.3RX0MIiQ2mbZ8B0hSxtgsjrpc8SzubPm6E-NZ8_Bb1Y\",\r\n    \"couponCode\":\"123b\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/student/couponcode",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"student",
+								"couponcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Class",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tutor",
+			"item": [
+				{
+					"name": "Tutor Register (Email)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\" : \"tutor15@gmail.com\",\r\n  \"password\" : \"abcabc\",\r\n  \"referralCode\":\"ddcf7eac06a8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/register/email",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"register",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Personal Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODEyMDI5MzQsImV4cCI6MTY4MTIwNjUzNH0.CtHeOveAeZHOqmgDVjbAL2FiFZukzey-wbqC7_CVwOE",
+									"type": "text"
+								},
+								{
+									"key": "profilephoto",
+									"type": "file",
+									"src": "/C:/itotek-original/images/team-3.png"
+								},
+								{
+									"key": "name",
+									"value": "Tutor",
+									"type": "text"
+								},
+								{
+									"key": "mobileNo",
+									"value": "7845784578",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "india",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "20/02/2000",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/register/personal",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"register",
+								"personal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Add Subjects",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0MDU5ZDc2YzQyMGZhNzIwOWNiZmEiLCJpYXQiOjE2NzkwMzM3NTcsImV4cCI6MTY3OTAzNzM1N30.eIVtEr_4olb0roQJvFyjSMfGB_XeDNcY2h2uUYUs0gk\",\r\n  \"subjects\": [\"Maths\", \"Chemistry\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/register/addsubjects",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"register",
+								"addsubjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor professional Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMTkzNTFkZDBmNjdiM2QxMjI0NWYiLCJpYXQiOjE2ODE3MjU3NDksImV4cCI6MTY4MTcyOTM0OX0.dPwPQplxOfb8dmy6HnVI2EfKUCK4UqTIxL2nBPsJZO4",
+									"type": "text"
+								},
+								{
+									"key": "degree_choice",
+									"value": "yes",
+									"type": "text"
+								},
+								{
+									"key": "degree",
+									"value": "Bcom",
+									"type": "text"
+								},
+								{
+									"key": "degree_specialisation",
+									"value": "law",
+									"type": "text"
+								},
+								{
+									"key": "clg_name",
+									"value": "spb",
+									"type": "text"
+								},
+								{
+									"key": "clg_city",
+									"value": "surat",
+									"type": "text"
+								},
+								{
+									"key": "gpa",
+									"value": "3.9",
+									"type": "text"
+								},
+								{
+									"key": "degree_image",
+									"type": "file",
+									"src": "/C:/itotek-original/images/author-3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/tutor/register/professional",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"register",
+								"professional"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Bank Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODE4MDIwNTYsImV4cCI6MTY4MTgwNTY1Nn0.oeWJJzo0yq2s1tSlRabgTvnufu2lBDX4FMfGC2eeG5Q\",\r\n    \"name\": \"Tutor 1\",\r\n    \"bankName\": \"State Bank 45Of India\",\r\n    \"country\": \"India\",\r\n    \"accountNumber\": \"85457845621\",\r\n    \"IFSCCode\": \"IDBI656df4f225\",\r\n    \"accountType\": \"Saving\",\r\n    \"panCard\": \"dff6dgf4564g4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/bankdetails",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"bankdetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y2ZWViNjQ2MmExYzQwOGRhYTZmMTMiLCJpYXQiOjE2NzcxNTE4OTEsImV4cCI6MTY3NzE1NTQ5MX0.gX2EZc-UUVnB9T8usPkFctN4GvC2WJheLZgea_BtV9g\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Screen Time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0MDU5ZDc2YzQyMGZhNzIwOWNiZmEiLCJpYXQiOjE2NzkwMzM3NTcsImV4cCI6MTY3OTAzNzM1N30.eIVtEr_4olb0roQJvFyjSMfGB_XeDNcY2h2uUYUs0gk\",\r\n    \"screenTime\": 10\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/screentime",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"screentime"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Login (Email)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\" : \"tutor1@gmail.com\",\r\n  \"password\" : \"abcabc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/login/email",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"login",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unsolved Question Assign to Tutor or get warning",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U0OWNlMTAyZmJlYmRjYTQ2NTQwYjQiLCJpYXQiOjE2Nzc4MjA2OTMsImV4cCI6MTY3NzkwNzA5M30.9AO4hbT5F_Bxu6GL1Eru6vOxMaoSsApzXtJaYJDIz00",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDI0MWY0NzZiM2VmNDI0MWMyZDFkZDciLCJpYXQiOjE2ODAwODg5MDMsImV4cCI6MTY4MDA5MjUwM30.CjEXL9EzxxI1IYTUejA2k27p8Rq6JZQG59DJMfPdzok\",\r\n    \"questionId\": \"64242309ff46aa54ca1d9b36\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/checkunsolvedquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"checkunsolvedquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unsolvedquestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODI2OTA4NzAsImV4cCI6MTY4MjY5NDQ3MH0.kMKPFPjeyp09dDK-FpSey_kNDmp65s_bsSu6lsqK4Ds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/unsolvedquestion?limit=5&skip=0&questionType=MCQ-exp",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"unsolvedquestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "questionType",
+									"value": "MCQ-exp"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignedquestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODI2OTA4NzAsImV4cCI6MTY4MjY5NDQ3MH0.kMKPFPjeyp09dDK-FpSey_kNDmp65s_bsSu6lsqK4Ds\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/assignquestion?limit=5&skip=0&questionType=MCQ",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"assignquestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "questionType",
+									"value": "MCQ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODA3NzY2MDYsImV4cCI6MTY4MDc4MDIwNn0.w5njTWHNo5l69Z8IQcGg6tvhad244dMBTfeE8f5O5JE\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/question?limit=5&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"question"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unsolved question answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODE4ODg2ODgsImV4cCI6MTY4MTg5MjI4OH0.wi6XaTx2z2ZHn11uYNRTvAhdV5-TgeLf3SzP9bgitEw\",\r\n    \"questionId\":\"643656991df2576432180433\",\r\n    \"answer\":\"vxcvcv\",\r\n    \"explanation\":\"cvxcvxcv\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/unsolvedsendanswer",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"unsolvedsendanswer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Wallet Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJiZDA5YjljY2RiYzQ1NDJiZTIzNWQiLCJpYXQiOjE2ODA1OTMwNTEsImV4cCI6MTY4MDU5NjY1MX0.FVtJt5rBqLhvq2HeoLz-kC7rnW08ZNXU7dG0vhnScwo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/wallet",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Contact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODA1MDE4MDIsImV4cCI6MTY4MDUwNTQwMn0.RcJU6y_U5HLOII1RsS258K5Ok0ERfIl6Ph14z4MSFLY\",\r\n    \"fullname\":\"tutor\",\r\n    \"mobileNo\":\"1234567890\",\r\n    \"email\":\"tutor1@gmail.com\",\r\n    \"Message\":\"vcvcxv\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/contact",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor answer streak",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODA3NzY2MDYsImV4cCI6MTY4MDc4MDIwNn0.w5njTWHNo5l69Z8IQcGg6tvhad244dMBTfeE8f5O5JE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/answerstreak",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"answerstreak"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Referral Dashboard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJiY2ZkZTljY2RiYzQ1NDJiZTIzM2YiLCJpYXQiOjE2ODA1OTI4NjIsImV4cCI6MTY4MDU5NjQ2Mn0.A-dhEIs5SmoQNFMenYmhZVfYBDcXB86CGnPD3ejHBxI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/referraldashboard",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"referraldashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Answer streak cashout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJiY2ZkZTljY2RiYzQ1NDJiZTIzM2YiLCJpYXQiOjE2ODA1OTI4NjIsImV4cCI6MTY4MDU5NjQ2Mn0.A-dhEIs5SmoQNFMenYmhZVfYBDcXB86CGnPD3ejHBxI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/referraldashboard",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"referraldashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Referral Complete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODE4ODg2ODgsImV4cCI6MTY4MTg5MjI4OH0.wi6XaTx2z2ZHn11uYNRTvAhdV5-TgeLf3SzP9bgitEw\",\r\n    \"userId\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/referralcomplete",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"referralcomplete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Live Question Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODMwOTE2MTEsImV4cCI6MTY4MzA5NTIxMX0.q7kWtXw5699b2B1yrnYMwCslqL66GEQpoJ2sRcpg4hQ\",\r\n    \"questionId\": \"6451f07e5602c78b4a716333\",\r\n    \"internalStatus\": \"AssignedWithFindResponse\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/question/changestatus",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"changestatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Answer to Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODMwOTE2MTEsImV4cCI6MTY4MzA5NTIxMX0.q7kWtXw5699b2B1yrnYMwCslqL66GEQpoJ2sRcpg4hQ\",\r\n    \"questionId\": \"6451eabc5602c78b4a715c83\",\r\n    \"answer\": \"b\",\r\n    \"explanation\": \"\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/sendanswer",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"sendanswer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Live Question Skip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0MDU4NTc2YzQyMGZhNzIwOWNiZTgiLCJpYXQiOjE2NzkwMzM3MzMsImV4cCI6MTY3OTAzNzMzM30.fUGaqBrYWgS3tj5K2X_hYc86Of0a-zAV7T-Xiqe5cQw\",\r\n    \"questionId\": \"6414060976c420fa7209cc16\",\r\n    \"internalStatusBefore\": \"AssignedWithFindResponse\",\r\n    \"internalStatusAfter\": \"AssignedWithResponse\",\r\n    \"reason\": \"ds\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/question/changestatus",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"question",
+								"changestatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Register(Google)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDJhYzBlYWU1NGY5YTg3MTI4NTYzMDYiLCJpYXQiOjE2ODA1MjM0OTgsImV4cCI6MTY4MDUyNzA5OH0.7u-DGgUQ1knbUK3LAgoLUxtH-AuDCznzrnH4DaC_ns8\",\r\n    \"password\":\"abcabc\",\r\n    \"referralCode\":\"1a99774b8f70\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/googleregister",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"googleregister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Exam Subjectwise",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODIzMTUxNzcsImV4cCI6MTY4MjMxODc3N30.Kp_iL6N02FCdS-Tfcp3IuICWB__cmCkMNssNgGxN10k\",\r\n    \"subject\": \"Maths\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/randomizedtutorquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"randomizedtutorquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Tutor Exam Response",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDFhZDBhOThjOWNlYjc1Y2RiM2M4YzIiLCJpYXQiOjE2ODIzMTUxNzcsImV4cCI6MTY4MjMxODc3N30.Kp_iL6N02FCdS-Tfcp3IuICWB__cmCkMNssNgGxN10k\",\r\n    \"subject\": \"Maths\",\r\n    \"questions\": [\r\n        {\r\n            \"_id\": \"64460e5cf33da04d9d707605\",\r\n            \"question\": \"Maths Question 014\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"Paris\"\r\n        },\r\n        {\r\n            \"_id\": \"64460ddbf33da04d9d7075d1\",\r\n            \"question\": \"Maths Question 001\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"Paris\"\r\n        },\r\n        {\r\n            \"_id\": \"64460de8f33da04d9d7075d9\",\r\n            \"question\": \"Maths Question 003\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"Paris\"\r\n        },\r\n        {\r\n            \"_id\": \"64460df4f33da04d9d7075e5\",\r\n            \"question\": \"Maths Question 006\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"\"\r\n        },\r\n        {\r\n            \"_id\": \"64460de3f33da04d9d7075d5\",\r\n            \"question\": \"Maths Question 002\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"\"\r\n        },\r\n        {\r\n            \"_id\": \"64460dfef33da04d9d7075ed\",\r\n            \"question\": \"Maths Question 008\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"\"\r\n        },\r\n        {\r\n            \"_id\": \"64460debf33da04d9d7075dd\",\r\n            \"question\": \"Maths Question 004\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"Paris\"\r\n        },\r\n        {\r\n            \"_id\": \"64460e61f33da04d9d707609\",\r\n            \"question\": \"Maths Question 015\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"Paris\"\r\n        },\r\n        {\r\n            \"_id\": \"64460e08f33da04d9d7075f5\",\r\n            \"question\": \"Maths Question 010\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"Paris\"\r\n        },\r\n        {\r\n            \"_id\": \"64460deff33da04d9d7075e1\",\r\n            \"question\": \"Maths Question 005\",\r\n            \"mcqoptions\": [\r\n                \"Paris\",\r\n                \"London\",\r\n                \"Berlin\",\r\n                \"Madrid\"\r\n            ],\r\n            \"questionType\": \"MCQ\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"Paris\"\r\n        },\r\n        {\r\n            \"_id\": \"64460f15f33da04d9d707631\",\r\n            \"question\": \"Maths Theory Question 010\",\r\n            \"questionType\": \"theory\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"gfdgg dfggdfgdfg\"\r\n        },\r\n        {\r\n            \"_id\": \"64460eb2f33da04d9d707619\",\r\n            \"question\": \"Maths Theory Question 004\",\r\n            \"questionType\": \"theory\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"dfgdfgdf gdfgdfgdf\"\r\n        },\r\n        {\r\n            \"_id\": \"64460eb7f33da04d9d70761d\",\r\n            \"question\": \"Maths Theory Question 005\",\r\n            \"questionType\": \"theory\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"dfgdfgdfg dgfgdfgdfg\"\r\n        },\r\n        {\r\n            \"_id\": \"64460f11f33da04d9d70762d\",\r\n            \"question\": \"Maths Theory Question 009\",\r\n            \"questionType\": \"theory\",\r\n            \"questionSubject\": \"Maths\",\r\n            \"answer\": \"ghfhfg gfhfghgfh\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/tutorexamanswer",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"tutorexamanswer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Exam Subject Choice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/getexamsubjectchoice",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"getexamsubjectchoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Stats",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/tutor/gettutorstats",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"tutor",
+								"gettutorstats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Register Google",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin1@gmail.com\",\r\n    \"password\": \"abcabc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin1\",\r\n    \"email\": \"admin1@gmail.com\",\r\n    \"password\": \"abcabc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/register",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Set Question Timing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2Nzg5NDczMzgsImV4cCI6MTY3ODk1MDkzOH0.YgPm98ZHU9SvGg7mAKsli8QECGZq2a8rQhjA1fEScuo\",\r\n    \"Type\": \"MCQ1\",\r\n    \"first_time\": 10,\r\n    \"second_time\": 5,\r\n    \"skip_time\": 10,\r\n    \"total_time\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/setquestiontiming",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"setquestiontiming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Get Question Types for timing",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2Nzg5NDczMzgsImV4cCI6MTY3ODk1MDkzOH0.YgPm98ZHU9SvGg7mAKsli8QECGZq2a8rQhjA1fEScuo\",\r\n    \"Type\": \"MCQ1\",\r\n    \"first_time\": 10,\r\n    \"second_time\": 5,\r\n    \"skip_time\": 10,\r\n    \"total_time\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/getquestiontypefortiming",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"getquestiontypefortiming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reanswer Timing and Choice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2NzkwNDYyNTIsImV4cCI6MTY3OTA0OTg1Mn0.XKL1v35M_d2dSbtMgv17kIVq5Sll2PZQanvHaPnRu80\",\r\n    \"reanswer_time\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/setreanswer",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"setreanswer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Set Question Pricing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODM3NzkwMDksImV4cCI6MTY4Mzc4MjYwOX0.Yk-nAol1x91Pelg5ZwCBr3ps5bL7ZPHdvxOhu_DHCbI\",\r\n    \"Type\": \"LongAnswer\",\r\n    \"question_price\": 35,\r\n    \"tutor_price\": 30,\r\n    \"admin_price\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/setquestionpricing",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"setquestionpricing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Get Question Types for pricing",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODM3NzkwMDksImV4cCI6MTY4Mzc4MjYwOX0.Yk-nAol1x91Pelg5ZwCBr3ps5bL7ZPHdvxOhu_DHCbI\",\r\n    \"Type\": \"LongAnswer\",\r\n    \"question_price\": 35,\r\n    \"tutor_price\": 30,\r\n    \"admin_price\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/getquestiontypeforpricing",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"getquestiontypeforpricing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Currency Conversion Rate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2NzkzMTQzMDgsImV4cCI6MTY3OTMxNzkwOH0.3Xn2XYBH6f6n9cmfR1X78UjHGuylwW4OeQeY8-7ez7c\",\r\n    \"Currency\": \"USD\",\r\n    \"ConversionToInr\": 78.56\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/setcurrencyconversion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"setcurrencyconversion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Currency Conversion Rate Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2NzkzMTQzMDgsImV4cCI6MTY3OTMxNzkwOH0.3Xn2XYBH6f6n9cmfR1X78UjHGuylwW4OeQeY8-7ez7c\",\r\n    \"Currency\": \"USD\",\r\n    \"ConversionToInr\": 78.56\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/setcurrencyconversion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"setcurrencyconversion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODAzMjgwNTYsImV4cCI6MTY4MDMzMTY1Nn0.6s_p0nDzBiQWTB-8jLNbQ4JFW2XKLV4cY_bcfI9Mk48\",\r\n    \"questionType\":\"MCQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/questiontype",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questiontype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Question Subject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODAzMjgwNTYsImV4cCI6MTY4MDMzMTY1Nn0.6s_p0nDzBiQWTB-8jLNbQ4JFW2XKLV4cY_bcfI9Mk48\",\r\n    \"questionSubject\":\"chemistry\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/questionsubject",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionsubject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Warning Tutors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODQ5ODgyODksImV4cCI6MTY4NDk5MTg4OX0.Dq_kAi_6Jvsz8HXii7skyDCKvMtAsVc8JvTWLgmI5jU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/warningtutor",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"warningtutor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unverified Tutor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODA2OTUzMjEsImV4cCI6MTY4MDY5ODkyMX0.hoCBckLdAwz0_dXgcmmYfupcZt1VDzf2DYs5iDlOp4k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1admin/unverifiedtutor",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"unverifiedtutor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verified Tutor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODA2OTUzMjEsImV4cCI6MTY4MDY5ODkyMX0.hoCBckLdAwz0_dXgcmmYfupcZt1VDzf2DYs5iDlOp4k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1admin/tutorlist",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE3OTY0NjEsImV4cCI6MTY4MTgwMDA2MX0.gkTGZZlCsmOEGXzHoGcGwkdfJMK2buL-IbDgOE_BNX4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/api/v1/admin/tutordetails/64381799527d984dbf385aab",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutordetails",
+								"64381799527d984dbf385aab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Transaction Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODA4NDEyMzQsImV4cCI6MTY4MDg0NDgzNH0.7EKnDwfhtbF9T2zWiMHv91DHW3MSCGoKWXnpyD6hOfc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/transactiondetails/641ad0a98c9ceb75cdb3c8c2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"transactiondetails",
+								"641ad0a98c9ceb75cdb3c8c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Question Answer ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODEzNjM0MDcsImV4cCI6MTY4MTM2NzAwN30.j45M6qVMacalUEX5NEgpJD2kzYiNz2FTq6iLA7idLZE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorquestionanswer/641ad0a98c9ceb75cdb3c8c2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorquestionanswer",
+								"641ad0a98c9ceb75cdb3c8c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Warning Question Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODQ5ODgyODksImV4cCI6MTY4NDk5MTg4OX0.Dq_kAi_6Jvsz8HXii7skyDCKvMtAsVc8JvTWLgmI5jU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/gettutorwarningquestion/641ad0a98c9ceb75cdb3c8c2?skip=0&limit=5",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"gettutorwarningquestion",
+								"641ad0a98c9ceb75cdb3c8c2"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Suspend",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODQ5ODgyODksImV4cCI6MTY4NDk5MTg4OX0.Dq_kAi_6Jvsz8HXii7skyDCKvMtAsVc8JvTWLgmI5jU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/suspendtutor/641c235bce0bc38080c55e78",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"suspendtutor",
+								"641c235bce0bc38080c55e78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE0NDk4NjYsImV4cCI6MTY4MTQ1MzQ2Nn0.zouJUgojA_tZGIrFd4y84zXzAFPkUPKP5b5HQn7gcpw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorsinfo/641ad0a98c9ceb75cdb3c8c2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorsinfo",
+								"641ad0a98c9ceb75cdb3c8c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Update all Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE0NDk4NjYsImV4cCI6MTY4MTQ1MzQ2Nn0.zouJUgojA_tZGIrFd4y84zXzAFPkUPKP5b5HQn7gcpw",
+									"type": "text"
+								},
+								{
+									"key": "profilephoto",
+									"type": "file",
+									"src": "/C:/itotek-original/images/author-2.jpg",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "tutor",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "india",
+									"type": "text"
+								},
+								{
+									"key": "mobileNo",
+									"value": "1234567892",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "20/02/2000",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "degree_choice",
+									"value": "yes",
+									"type": "text"
+								},
+								{
+									"key": "degree",
+									"value": "it",
+									"type": "text"
+								},
+								{
+									"key": "degree_specialisation",
+									"value": "law",
+									"type": "text"
+								},
+								{
+									"key": "degre_image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "clg_name",
+									"value": "spb",
+									"type": "text"
+								},
+								{
+									"key": "clg_city",
+									"value": "surat",
+									"type": "text"
+								},
+								{
+									"key": "gpa",
+									"value": "3.9",
+									"type": "text"
+								},
+								{
+									"key": "bankcountry",
+									"value": "india",
+									"type": "text"
+								},
+								{
+									"key": "Tutorbankname",
+									"value": "tutor",
+									"type": "text"
+								},
+								{
+									"key": "bankName",
+									"value": "state bank of india",
+									"type": "text"
+								},
+								{
+									"key": "accountNumber",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "IFSCCode",
+									"value": "IDBI656df4f225",
+									"type": "text"
+								},
+								{
+									"key": "accountType",
+									"value": "Saving",
+									"type": "text"
+								},
+								{
+									"key": "panCard",
+									"value": "dff6dgf4564g4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorsdetails/641ad0a98c9ceb75cdb3c8c2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorsdetails",
+								"641ad0a98c9ceb75cdb3c8c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Payment Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE3OTY0NjEsImV4cCI6MTY4MTgwMDA2MX0.gkTGZZlCsmOEGXzHoGcGwkdfJMK2buL-IbDgOE_BNX4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorspayment",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorspayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Payment Details Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE3OTY0NjEsImV4cCI6MTY4MTgwMDA2MX0.gkTGZZlCsmOEGXzHoGcGwkdfJMK2buL-IbDgOE_BNX4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutpay?startDate=2023-01-01&endDate=2023-05-03",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutpay"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-05-03"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODEyNzYzNjcsImV4cCI6MTY4MTI3OTk2N30.xu0CsfDKfXiVgyDBqvXBUdf2jFbzwHpc8RIgJi2QGlE\",\r\n    \"balance\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorpayment/641ad0a98c9ceb75cdb3c8c2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorpayment",
+								"641ad0a98c9ceb75cdb3c8c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor min balance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODEyNzYzNjcsImV4cCI6MTY4MTI3OTk2N30.xu0CsfDKfXiVgyDBqvXBUdf2jFbzwHpc8RIgJi2QGlE\",\r\n    \"minBalance\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorminbalance",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorminbalance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE3OTY0NjEsImV4cCI6MTY4MTgwMDA2MX0.gkTGZZlCsmOEGXzHoGcGwkdfJMK2buL-IbDgOE_BNX4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/studentlist",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"studentlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE3MDk4MjEsImV4cCI6MTY4MTcxMzQyMX0.XPNC9cG25YlPJ9h7bjAxVjSzj04aB4_zWRFpsRLddMA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/studentdetails/643d3142057e8137b07f6df4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"studentdetails",
+								"643d3142057e8137b07f6df4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Transaction Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODE3MDk4MjEsImV4cCI6MTY4MTcxMzQyMX0.XPNC9cG25YlPJ9h7bjAxVjSzj04aB4_zWRFpsRLddMA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/studenttransactiondetails/643d3142057e8137b07f6df4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"studenttransactiondetails",
+								"643d3142057e8137b07f6df4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student Question Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODM3NzkwMDksImV4cCI6MTY4Mzc4MjYwOX0.Yk-nAol1x91Pelg5ZwCBr3ps5bL7ZPHdvxOhu_DHCbI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/studentquestionanswer/64104a5531eaf63b6c05d993",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"studentquestionanswer",
+								"64104a5531eaf63b6c05d993"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tutor Exam Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODIwNTc3NTUsImV4cCI6MTY4MjA2MTM1NX0.9uDrbS3csTd7zT8e8ygYn2n1mvZVcCVeLBF1tsjIJNs\",\r\n    \"MCQ\": 10,\r\n    \"theory\": 4 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorexamdetail",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorexamdetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tutor Exam Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODIzMTIyOTQsImV4cCI6MTY4MjMxNTg5NH0.pZk9y0d9097SMBZpTiAKPyxSyI2IiAWpZ0ThwgZ--jQ\",\r\n    \"question\":\"Maths Theory Question 010\",\r\n    \"questionType\":\"theory\",\r\n    // if mcq then mcqoptions\r\n    // \"mcqoptions\": [\"Paris\", \"London\", \"Berlin\", \"Madrid\"],\r\n    \"questionSubject\":\"Maths\",\r\n    \"answer\":\"Paris\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/ask/tutorexamquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"ask",
+								"tutorexamquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Add Tutor Exam  Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODIzMTIyOTQsImV4cCI6MTY4MjMxNTg5NH0.pZk9y0d9097SMBZpTiAKPyxSyI2IiAWpZ0ThwgZ--jQ\",\r\n    \"question\":\"Maths Theory Question 010\",\r\n    \"questionType\":\"theory\",\r\n    // if mcq then mcqoptions\r\n    // \"mcqoptions\": [\"Paris\", \"London\", \"Berlin\", \"Madrid\"],\r\n    \"questionSubject\":\"Maths\",\r\n    \"answer\":\"Paris\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/ask/tutorexamquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"ask",
+								"tutorexamquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Update Tutor Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODA2OTUzMjEsImV4cCI6MTY4MDY5ODkyMX0.hoCBckLdAwz0_dXgcmmYfupcZt1VDzf2DYs5iDlOp4k\",\r\n    \"question\":\"cbxcv\",\r\n    \"questionType\":\"MCQ\",\r\n    \"questionSubject\":\"Maths\",\r\n    \"answer\":\"bvcbvc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/question/642e4ac902364642d9169eb6",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"question",
+								"642e4ac902364642d9169eb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Delete Tutor Question",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODA2OTUzMjEsImV4cCI6MTY4MDY5ODkyMX0.hoCBckLdAwz0_dXgcmmYfupcZt1VDzf2DYs5iDlOp4k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/question/642e4c6d091e2fdd63269354",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"question",
+								"642e4c6d091e2fdd63269354"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Tutor Exam Verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODI1NzE5MDgsImV4cCI6MTY4MjU3NTUwOH0.qE4MM5eSAJ5F0kRUVjdpvRMWcXvAp8rQeQh-NpFC1C0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/admintutorexamverify",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"admintutorexamverify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Tutor Exam Responce by Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"\",\r\n    \"examId\": \"\",\r\n    \"tutorId\": \"\",\r\n    \"veridict\": ,\r\n    \"finalScore\": ,\r\n    \"mcqScore\": ,\r\n    \"theoryScore\": ,\r\n    \"theoryQA\": \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/admintutorexamresponse",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"admintutorexamresponse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Social Media Handles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODIzMTIyOTQsImV4cCI6MTY4MjMxNTg5NH0.pZk9y0d9097SMBZpTiAKPyxSyI2IiAWpZ0ThwgZ--jQ\",\r\n    \"Facebook\":\"facebook.com\",\r\n    \"LinkedIn\":\"LinkedIn.com\",\r\n    \"Twitter\":\"Twitter.com\",\r\n    \"YouTube\":\"YouTube.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/socialmedia",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"socialmedia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Add Coupon Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODIzMTIyOTQsImV4cCI6MTY4MjMxNTg5NH0.pZk9y0d9097SMBZpTiAKPyxSyI2IiAWpZ0ThwgZ--jQ\",\r\n    \"couponCode\":\"123b\",\r\n    \"validityDate\":\"2023-04-24\",\r\n    \"discount\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/couponcode",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"couponcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Get Coupon Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODIzMTIyOTQsImV4cCI6MTY4MjMxNTg5NH0.pZk9y0d9097SMBZpTiAKPyxSyI2IiAWpZ0ThwgZ--jQ\",\r\n    \"couponCode\":\"123b\",\r\n    \"validityDate\":\"2023-04-24\",\r\n    \"discount\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/couponcode",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"couponcode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Delete Coupon code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODIzMTIyOTQsImV4cCI6MTY4MjMxNTg5NH0.pZk9y0d9097SMBZpTiAKPyxSyI2IiAWpZ0ThwgZ--jQ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/deletecouponcode/644654c04950ff352873d9ab",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"deletecouponcode",
+								"644654c04950ff352873d9ab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Question Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/questionpost",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionpost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Question Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/getquestiontype",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"getquestiontype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Question Subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/getquestiontype",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"getquestiontype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin View Questions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODI2NjA4MDYsImV4cCI6MTY4MjY2NDQwNn0.5C2OG-E1La3t9bY-bWlFJ0LV-OBJPG-9B-ly7Ytol1k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/adminviewquestion?limit=5&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"adminviewquestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Search Questions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/adminsearchquestion?limit=5&skip=0&search=what is",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"adminsearchquestion"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "search",
+									"value": "what is"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Add Tutor Exam Subject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODI5MjM2MTUsImV4cCI6MTY4MjkyNzIxNX0.bICZ1_wg8Mk7rCZTEGh5Jh53vjoBJKDFkXv22WgKBM4\",\r\n    \"subject\": \"Languages And Communication\",\r\n    \"subSubjects\": [\"English Literature\" , \"English Grammer\" , \"English Writing\" , \"Hindi\" , \"Sanskrit\" , \"Other Languages\" , \"Logical Reasoning\" , \"General Knowledge\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/tutorexamsubject",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"tutorexamsubject"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get CMS",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/gettutorexamquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"gettutorexamquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin All Live Questions to give answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODM2OTE5NDUsImV4cCI6MTY4MzY5NTU0NX0.Qx3ylawGQPDrzeJDN_7Z7NInLzx5RDcOKa8UBPX-zcw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/adminquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"adminquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Answer to  Live Questions to give answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODM2OTE5NDUsImV4cCI6MTY4MzY5NTU0NX0.Qx3ylawGQPDrzeJDN_7Z7NInLzx5RDcOKa8UBPX-zcw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/adminquestion",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"adminquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODMxMTQ4MTIsImV4cCI6MTY4MzExODQxMn0.2OqWcbNkLhu6qEzYhkXTRasX8iFN_SzPbMoeFz-Lny8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/adminwallet?category=Tutor&type=Answer given&limit=10&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"adminwallet"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Tutor"
+								},
+								{
+									"key": "type",
+									"value": "Answer given"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin specific Wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODMxMTQ4MTIsImV4cCI6MTY4MzExODQxMn0.2OqWcbNkLhu6qEzYhkXTRasX8iFN_SzPbMoeFz-Lny8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/adminwallet?category=Tutor&type=Answer given&limit=10&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"adminwallet"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Tutor"
+								},
+								{
+									"key": "type",
+									"value": "Answer given"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Dashboard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODMxMTQ4MTIsImV4cCI6MTY4MzExODQxMn0.2OqWcbNkLhu6qEzYhkXTRasX8iFN_SzPbMoeFz-Lny8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/adminwallet?category=Tutor&type=Answer given&limit=10&skip=0",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"adminwallet"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Tutor"
+								},
+								{
+									"key": "type",
+									"value": "Answer given"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "skip",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add/Update class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODQxMjM3MzEsImV4cCI6MTY4NDEyNzMzMX0.WqZKtvaZT3zxjIaFp22C3RcHbZ3f0W8xhue8JKrW47Y\",\r\n    \"studentClass\": \"University – Graduate\"\r\n    // \"id\": \"64621ac28b1f3a539033e9bd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/setclass",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"setclass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get class with id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODQxMjM3MzEsImV4cCI6MTY4NDEyNzMzMX0.WqZKtvaZT3zxjIaFp22C3RcHbZ3f0W8xhue8JKrW47Y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/getclass",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"getclass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete class with id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODQxMjM3MzEsImV4cCI6MTY4NDEyNzMzMX0.WqZKtvaZT3zxjIaFp22C3RcHbZ3f0W8xhue8JKrW47Y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/deleteclass/64621b698b1f3a539033eccf",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"deleteclass",
+								"64621b698b1f3a539033eccf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tutor Exam Subjects",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2Y4NGFlOTUzMzkxOTA2N2Q1YTA5ODkiLCJpYXQiOjE2ODQxMjM3MzEsImV4cCI6MTY4NDEyNzMzMX0.WqZKtvaZT3zxjIaFp22C3RcHbZ3f0W8xhue8JKrW47Y\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/admin/deleteclass/64621b698b1f3a539033eccf",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"deleteclass",
+								"64621b698b1f3a539033eccf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Misc",
+			"item": [
+				{
+					"name": "Admin central db feed",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Admin fakedata",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Admin summary",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

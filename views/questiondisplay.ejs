@@ -1,0 +1,9 @@
+<h1><%= question.question %></h1>
+
+<% if (imageUrls.length > 0) { %>
+  <ul>
+    <% for (let i = 0; i < imageUrls.length; i++) { %>
+      <li><img border="5" width="100px" height="100px" src="<%= imageUrls[i] %>"></li>
+    <% } %>
+  </ul>
+<% } %>
